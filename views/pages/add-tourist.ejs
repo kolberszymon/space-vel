@@ -1,0 +1,52 @@
+<!doctype html>
+<html>
+<head>
+  <% include ../partials/head %>
+</head>
+<body>
+  <header>
+    <% include ../partials/header %>
+  </header>
+  <div class="content-tourist">
+    <div class="title"> Add a tourist: </div>
+    <form id="add-tourist" method="POST" action="/add-tourist">
+      <label for="name">Name:</label> <input type="text" name="name"> </br>
+      <label for="surname">Surname:</label> <input type="text" name="surname"> </br>
+      <label for="sex">Sex:</label>
+      <select name="sex">
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select> </br>
+      Country:
+      <select name="country">
+      	<option value="AF">Afghanistan</option>
+      	<option value="AX">Åland Islands</option>
+      	<option value="AL">Albania</option>
+      	<option value="EH">Western Sahara</option>
+      	<option value="YE">Yemen</option>
+      	<option value="ZM">Zambia</option>
+      	<option value="ZW">Zimbabwe</option>
+      </select>
+      </br>
+      Notes: </br>
+      <textarea name="notes" cols="30" rows="5">-</textarea> </br>
+      Date of birth: <input type="date" name="birthdate"> </br>
+      Flights list:
+      <select name="flightID">
+        <option value="none">None</option>
+        <% flights.forEach((flight) => { %>
+          <option value="<%= flight._id %>"><%= flight._id %></option>
+        <% }); %>
+      </select>
+      </br>
+      <input type="submit" value="submit">
+    </form>
+  </div>
+  <div class="footer" >
+    <footer>
+      <% include ../partials/footer %>
+    </footer>
+  </div>
+
+</body>
+</html>

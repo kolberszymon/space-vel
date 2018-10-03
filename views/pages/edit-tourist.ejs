@@ -1,0 +1,35 @@
+<!doctype html>
+<html>
+<head>
+  <% include ../partials/head %>
+</head>
+<body>
+  <header>
+    <div class="header-title">
+        <a href="/">
+          SPACE<span style="color:#3C4EAE" >'</span>VEL
+        </a>
+    </div>
+  </header>
+  <div class="content">
+    Name: <%= tourist.name %> </br>
+    Surname: <%= tourist.surname %> </br>
+    Sex: <%= tourist.sex %> </br>
+    Country: <%= tourist.country %> </br>
+    <form method="POST" action="/edit-tourist/<%= tourist.id %>">
+      Flight:
+      <select name="flightID">
+        <option value="none">None</option>
+        <% flights.forEach((flight) => { %>
+          <option value="<%= flight._id %>"><%= flight._id %></option>
+        <% }); %>
+      </select>
+      </br>
+      <input type="submit" value="Update" >
+    </form>
+  </div>
+  <footer>
+    <% include ../partials/footer %>
+  </footer>
+</body>
+</html>

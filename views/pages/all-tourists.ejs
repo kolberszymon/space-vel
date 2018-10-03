@@ -1,0 +1,87 @@
+<!doctype html>
+<html>
+<head>
+  <% include ../partials/head %>
+</head>
+<body>
+  <header>
+    <% include ../partials/header %>
+  </header>
+  <div class="users">
+    <div class="legend">
+      <div class="property">
+        Name
+      </div>
+      <div class="property">
+        Surname
+      </div>
+      <div class="property">
+        Sex
+      </div>
+      <div class="property">
+        Country
+      </div>
+      <div class="property">
+        Notes
+      </div>
+      <div class="property">
+        Birthdate
+      </div>
+      <div class="property">
+        Flight
+      </div>
+      <div class="property">
+        Edit
+      </div>
+      <div class="property">
+        Delete
+      </div>
+    </div>
+
+    <!--  Remember about finally some data here :D-->
+    <% tourists.forEach(function(tourist) { %>
+      <div class="user-row">
+        <div class="user">
+          <%= tourist.name %>
+        </div>
+        <div class="user">
+          <%= tourist.surname %>
+        </div>
+        <div class="user">
+          <%= tourist.sex %>
+        </div>
+        <div class="user">
+          <%= tourist.country %>
+        </div>
+        <div class="user">
+          <%= tourist.notes %>
+        </div>
+        <div class="user">
+          <%= tourist.birthdate %>
+        </div>
+        <div class="user">
+          <%= tourist.flightID %>
+        </div>
+        <div class="user">
+          <a href="/edit-tourist/<%= tourist.id %>">Edit</a>
+        </div>
+        <div class="user">
+          <a href="/delete-tourist/<%= tourist.id %>">Delete</a>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+  <div class="add-button">
+    <a href="/add-tourist">
+      <button class="button" style"vertical-align:middle">
+        <span>Add Tourist</span>
+      </button>
+    </a>
+  </div>
+
+  <footer>
+    <% include ../partials/footer %>
+  </footer>
+
+</body>
+</html>

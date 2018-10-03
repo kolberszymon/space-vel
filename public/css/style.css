@@ -1,0 +1,239 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  font-family: 'Open Sans Condensed', sans-serif;
+  margin: 0px;
+  padding: 0px;
+  background: #F0F0F0;
+}
+
+header {
+  font-size: 5em;
+  font-family: 'Open Sans Condensed';
+  text-align: center;
+  width: 100%;
+  height:4em;
+  vertical-align: middle;
+  margin:auto;
+  position: relative;
+}
+
+.header-title {
+  margin: 0;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: relative;
+  color: #F7E808;
+  letter-spacing: 13px;
+}
+
+.header-title > a > img {
+  transform: rotate(45deg) translate(-100px,-50px);
+  position: absolute;
+}
+
+.managment {
+  font-family: 'Raleway';
+  width:50%;
+  height:15em;
+  float: left;
+  text-align: center;
+}
+
+.managment > img:hover {
+  fill: black;
+}
+
+footer {
+  padding-top: 5em;
+  clear: both;
+  font-size: 1.2em;
+  text-align: center;
+  width: 100%;
+  height: 2em;
+  color: #F7E808;
+}
+
+header a:link {
+  text-decoration: none;
+  color: #F7E808;
+}
+
+header a:visited {
+  text-decoration: none;
+  color: #F7E808;
+}
+
+.content {
+  width:100%;
+  height:13em;
+  text-align: center;
+  padding-left: 2em;
+  text-align: left;
+}
+
+.content a:link {
+  color: #3C4EAE;
+  text-decoration: none;
+}
+
+.content a:visited {
+  color: #3C4EAE;
+  text-decoration: none;
+}
+
+.content a:hover {
+    color: #F7E808;
+    background-color: transparent;
+}
+
+.tourist-managment {
+  width:25%;
+  float:left;
+  font-family: 'Raleway';
+}
+
+.title {
+  font-size: 2.2em;
+  width:100%;
+  padding-bottom: 0.5em;
+}
+
+input[type=text] {
+  padding: 5px 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.content-tourist{
+  letter-spacing: 1.8px;
+  width:100%;
+  text-align: center;
+  font-size: 1.4em;
+  line-height: 2em;
+}
+
+label {
+  display: inline-block;
+  width:150px;
+  text-align: right;
+}
+
+.footer {
+  width: 100%;
+  height:5em;
+}
+
+.div {
+  width:300px;
+}
+
+.users {
+  width:100%;
+}
+
+.legend{
+  padding-top: 0.5em;
+  font-size: 1.2em;
+  text-align: center;
+  width:100%;
+  height:2em;
+  background: #DDC7C7;
+}
+
+.legend::after {
+  clear: both;
+}
+
+.property{
+  float: left;
+  width: 11%;
+}
+
+.flight-property{
+  float: left;
+  width: 16%;
+}
+
+.user {
+  float:left;
+  width:11%;
+  background: #F0F0F0;
+}
+
+.flight {
+  float:left;
+  width:16%;
+  background: #F0F0F0;
+}
+
+.table-row {
+  float:left;
+  width:15%;
+  background: #F0F0F0;
+}
+
+.table {
+  float:left;
+  width: 15%;
+}
+
+
+
+.user-row {
+  padding-top: 2em;
+  font-size: 1.1em;
+  text-align: center;
+  width:100%;
+  height:2em;
+}
+
+.add-button {
+  padding-top: 3em;
+  width: 100%;
+  height:2em;
+  text-align: center;
+}
+
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #3C4EAE;
+  border: none;
+  color:#F0F0F0;
+  text-align: center;
+  font-size:20px;
+  width:200px;
+  padding:15px;
+  transition: all 0.5s;
+  cursor:pointer;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.content::after {
+  clear: both;
+}

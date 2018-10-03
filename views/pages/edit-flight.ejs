@@ -1,0 +1,46 @@
+<!doctype html>
+<html>
+<head>
+  <% include ../partials/head %>
+</head>
+<body>
+  <header>
+    <% include ../partials/header %>
+  </header>
+  <div class="content">
+
+    <div class="user-row">
+      <div class="table">
+        Name
+      </div>
+      <div class="table">
+        Surname
+      </div>
+    </div>
+      <% tourists.forEach((tourist) => { %>
+        <div class="user-row">
+          <div class="table-row">
+            <%= tourist.name %>
+          </div>
+          <div class="table-row">
+            <%= tourist.surname %>
+          </div>
+          <div class="table-row">
+            <a href="/cancel-flight/<%= tourist._id %>">Kick off flight :)</a>
+          </div>
+        </div>
+      <% }); %>
+
+  </div>
+  <div class="add-button">
+    <a href="/add-tourist-to-flight/<%= flight._id %>">
+      <button class="button" style"vertical-align:middle">
+        <span style="font-size:14px;">Add Tourist To Flight</span>
+      </button>
+    </a>
+  </div>
+  <footer>
+    <% include ../partials/footer %>
+  </footer>
+</body>
+</html>

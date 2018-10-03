@@ -1,0 +1,28 @@
+<!doctype html>
+<html>
+<head>
+  <% include ../partials/head %>
+</head>
+<body>
+  <header>
+    <% include ../partials/header %>
+  </header>
+  <div class="content-tourist">
+    <div class="title"> Add a flight: </div>
+    <form id="add-tourist" method="POST" action="/add-flight">
+      Departure time: <input type="datetime-local" name="departureTime"> </br>
+      Arrival time: <input type="datetime-local" name="arrivingTime"> </br>
+      Number Of seats: <input type="text" name="numberOfSeats"> </br>
+      Price: <input type="text" name="price"> $ </br>
+      <input type="submit" value="add">
+
+    </form>
+  </div>
+  <div class="footer" >
+    <footer>
+      <% include ../partials/footer %>
+    </footer>
+  </div>
+
+</body>
+</html>

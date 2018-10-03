@@ -1,0 +1,69 @@
+<!doctype html>
+<html>
+<head>
+  <% include ../partials/head %>
+</head>
+<body>
+  <header>
+    <% include ../partials/header %>
+  </header>
+  <div class="users">
+    <div class="legend">
+      <div class="flight-property">
+        Departure Time
+      </div>
+      <div class="flight-property">
+        Arriving Time
+      </div>
+      <div class="flight-property">
+        Number Of Seats
+      </div>
+      <div class="flight-property">
+        Number Of Tourists
+      </div>
+      <div class="flight-property">
+        Edit
+      </div>
+      <div class="flight-property">
+        Delete
+      </div>
+    </div>
+
+    <!--  Remember about finally some data here :D-->
+    <% flights.forEach(function(flight) { %>
+      <div class="user-row">
+        <div class="flight">
+          <%= flight.departureTime %>
+        </div>
+        <div class="flight">
+          <%= flight.arrivingTime %>
+        </div>
+        <div class="flight">
+          <%= flight.numberOfSeats %>
+        </div>
+        <div class="flight">
+          <%= flight.listOfTourist.length %>
+        </div>
+        <div class="flight">
+          <a href="/edit-flight/<%= flight.id %>">Edit</a>
+        </div>
+        <div class="flight">
+          <a href="/delete-flight/<%= flight.id %>">Delete</a>
+        </div>
+      </div>
+    <% }); %>
+  </div>
+  <div class="add-button">
+    <a href="/add-flight">
+      <button class="button" style"vertical-align:middle">
+        <span>Add Flight</span>
+      </button>
+    </a>
+  </div>
+
+  <footer>
+    <% include ../partials/footer %>
+  </footer>
+
+</body>
+</html>
